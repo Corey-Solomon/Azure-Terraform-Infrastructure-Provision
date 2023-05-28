@@ -19,13 +19,11 @@ Create a reproducible dev environment within Azure that I can deploy anytime I w
 
 <h2>Program walk-through:</h2>
 
-<p align="center">
 
- Let's get it
  
- test1234567
- 
- </p>
+
+
+
 <!--
  ```diff
 - text in red
