@@ -27,23 +27,26 @@ Create a reproducible dev environment within Azure that I can deploy anytime I w
  3. Created a "main.tf" file
  
  
- 4. 
-Azure Provider: <br/>
+ 4. Azure Provider: <br/>
  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/33846668-fd59-4b73-95fa-870117ddb3ed) <br/>
 Inserted in the Azure provider. What the Azure provider does is allows Terraform to communicate with the Azure API. That's how Terraform Knows how to deploy resources. I am administrating this procedure using the Azure CLI.
 
 
-5.
-terraform init: <br/>
+5. terraform init: <br/>
 ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/c22bf242-b71b-49f2-8855-56ba0a3489b7) <br/>
 ran the "terraform init" command to initialized the backend. The backend is a local backend which meants that my terraform state where everything is stored will be stored here.
 
 
 
-6.
-Deploying a reosurce group: <br/>
+6. Deploying a reosurce group: <br/>
 ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/cbed0c57-1a9c-4317-9e4c-1f9dffd2476e) <br/>
 Learned how to use “Terraform plan” to view changes made before I use “terraform apply”. In the figure above, I am deploying a resource group called “terraform-rg” into Azure in the East Us region. 
+
+
+
+7. Deployed a virtual network into a pre existing resource group via Terraform: <br/>
+ ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/ea32e116-5d50-445c-a247-44f20bdd486e) <br/>
+ Specifed resource group name and location. Assigned an address space.
 
 
 
