@@ -91,7 +91,7 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
       Now you want to add the azure key block to the main.tf file. Make sure it’s within the Azurerm_linux_virtual_machine block.
 
 ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/3a1d7b4d-9f0f-4c1b-8bf4-da29a03c5279) <br/>
-You want to utilize the “File” function and pass the terraformazurekey.pub direct directory through it to pull from it <br/>
+You want to utilize the “File” function and pass the terraformazurekey.pub direct directory through it to pull from it. <br/>
 
 
 
@@ -100,6 +100,19 @@ You want to utilize the “File” function and pass the terraformazurekey.pub d
 
 ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/545cb0c9-6a9b-4800-bf04-0a87f7f5a467) <br/>
 
+
+
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/b5e4f95d-5353-4735-b142-67215d00e474) <br/>
+ I then took the public address listed that was created and SSH into the Linux VM I created using
+ “ssh -i ~/.ssh/terraformazurekey adminuser@20.163.142.147” 
+ 
+ 
+ ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/f2f96b63-537f-4141-b7bb-d8ccefb96654) <br/>
+ 
+ I am currently now logged into the VM i created.
+ Ran the command : "lsb_release -a" to confirm what version of Ubuntu i’m on and where I am located currently 
+
+ 
 
 
 
