@@ -69,7 +69,41 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
 
 
  11. Creating a Network Interface in Azure with Terraform: <br/>
- 
+     ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/9db16954-0e0b-434e-967e-5695426d176b) <br/>
+     The NIC will receive it’s public ip address from the ip address I just created earlier.
+     
+     
+ 12. Building a Linux Virtual Machine: <br/>
+     ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/6d03add5-3eaa-4129-a002-1e530d8ee9e1) <br/>
+     For the size of the vm, we select “Standard_B1s” because that is what is recommended in the free tier.
+
+
+     
+  13. Creating an SSH key pair <br/>
+
+      Before this VM is created we still need to create our SSH key pair and add our configuration scripts <br/>
+      
+      Start out with a “ssh-keygen -t rsa” command to generate a key. You want to put it in the same folder you’re working from. <br/>
+      ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/45c59b46-9139-490f-97e6-fa340431816c) <br/>
+      ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/b84b7278-6fa6-4bae-950b-5469a68e8045) <br/>
+      You can list the home directory /.ssh to find the keys available. <br/>
+      
+      Now you want to add the azure key block to the main.tf file. Make sure it’s within the Azurerm_linux_virtual_machine block.
+
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/3a1d7b4d-9f0f-4c1b-8bf4-da29a03c5279) <br/>
+You want to utilize the “File” function and pass the terraformazurekey.pub direct directory through it to pull from it <br/>
+
+
+
+
+*** Virtual Machine has offically been created <br/>
+
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/545cb0c9-6a9b-4800-bf04-0a87f7f5a467) <br/>
+
+
+
+
+      
 
 
 
