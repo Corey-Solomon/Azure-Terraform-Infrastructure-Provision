@@ -51,6 +51,14 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
  
 8. Deploying a subnet in Azure with Terraform to a pre existing virtual network: <br/>
  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/a3f25c25-d24a-435d-a140-4ee2bbf8378b) <br/>
+ 
+ 
+ 9. Creating an Azure Security Group with Terraform: <br/>
+  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/292e204e-5908-4e16-a61e-ba6b9290c87f) <br/>
+  I am deploying my Azure security group resource separate from the Azure security group rule. It makes it more simple to modify/ make certain changes going   forward. This will make things a lot cleaner and easier to manage.
+
+
+
 
 
 
