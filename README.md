@@ -46,7 +46,13 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
 
 7. Deployed a virtual network into a pre existing resource group via Terraform: <br/>
  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/ea32e116-5d50-445c-a247-44f20bdd486e) <br/>
- Specifed resource group name and location. Assigned an address space.
+ Specifed resource group name and location. Assigned an address space. I did not declare subnets inline.
+ 
+ 
+8. Deploying a subnet in Azure with Terraform to a pre existing virtual network: <br/>
+ ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/a3f25c25-d24a-435d-a140-4ee2bbf8378b) <br/>
+
+
 
 
 
