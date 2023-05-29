@@ -56,7 +56,20 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
  9. Creating an Azure Security Group with Terraform: <br/>
   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/292e204e-5908-4e16-a61e-ba6b9290c87f) <br/>
   I am deploying my Azure security group resource separate from the Azure security group rule. It makes it more simple to modify/ make certain changes going   forward. This will make things a lot cleaner and easier to manage.
+  
+  
+ 10. Creating Public IP with Terraform: <br/>
+   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/cafa5cea-2bf4-4a1c-8d96-750d148d862a) <br/>
+   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/4d602c97-dd38-4db2-830f-a69bfa368e9f) <br/>
+   NOTE: Ip_address is labeled known after apply but even after it is applied, it will not be known until it can attach to something like a vm. When the public ip is set to “Dynamic” it will not show up until it is attached to something and is used.
 
+
+  
+
+
+
+ 11. Creating a Network Interface in Azure with Terraform: <br/>
+ 
 
 
 
