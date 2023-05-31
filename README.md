@@ -133,6 +133,32 @@ I passed the file “customdata.tpl” through the argument <br/>
 
 
 
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/e2518b46-303d-41fd-9c6e-e252d486ff8e) <br/>
+Here are my result from a "terraform plan" afterwards. <br/>
+As you can see it says 1 to add and 1 to destroy. <br/>
+** Note: it says one to destroy because custom data being added to the virtual machine forces the VM to be redeployed. <br/>
+
+
+
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/1aad395c-295a-4eac-8884-0cc2893b9246) <br/>
+NOTE: Once redeployed, the public ip has changed <br/>
+I then SSH into the newly created VM <br/>
+The command input is  “ssh -i ~/.ssh/terraformazurekey adminuser@74.235.9.99” <br/>
+
+
+
+
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/a04fc3eb-d73e-4488-a733-af1da2de1166) <br/>
+Once successfully in the linux virtual machine, check to see if Docker has been successfully bootstrap to the deployment by running a “docker –version” <br/>
+A bootstrap version of Docker to the Linux virtual machine was a success. It will now be ready to be deployed with the virtual machine anytime the VM is deployed. 
+
+
+
+
+
+
+
+
 
 
 
