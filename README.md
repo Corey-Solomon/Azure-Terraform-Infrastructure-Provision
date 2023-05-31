@@ -109,8 +109,32 @@ You want to utilize the “File” function and pass the terraformazurekey.pub d
  
  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/f2f96b63-537f-4141-b7bb-d8ccefb96654) <br/>
  
- I am currently now logged into the VM i created.
- Ran the command : "lsb_release -a" to confirm what version of Ubuntu i’m on and where I am located currently 
+ I am currently now logged into the VM I created.
+ Ran the command : "lsb_release -a" to confirm what version of Ubuntu i’m running and where I am currently located. 
+ 
+ 
+ 
+ 
+ 
+ 14. Passing Custom Data into the Linux Virtual Machine via Terraform <br/>
+
+     So here I am going to use the custom data argument to bootstrap the instance and install the docker engine. <br/>
+     This will allow me to have a Linux VM with Docker ready to go for all my future deployment needs. <br/>
+
+I created a customdata.tpl file (tpl typically stands for template) in the same working directory as Main.TF (Terraform-Azure folder) <br/>
+I placed a bash script in the file to install docker to the image upon deployment. <br/>
+
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/2d6b2f69-6377-4ba5-bf7c-48e83719fc6f) <br/>
+After that I went back to the main.tf and added the custom data argument to the Linux Virtual Machine section. <br/>
+I used the filebase64 function because “custom_data” in Azure is expecting just that <br/>
+![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/7c717168-b972-43fe-af59-210c039323b1) <br/>
+I passed the file “customdata.tpl” through the argument <br/>
+
+
+
+
+
+
 
  
 
