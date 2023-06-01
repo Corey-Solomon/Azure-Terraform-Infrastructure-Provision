@@ -162,9 +162,20 @@ A bootstrap version of Docker to the Linux virtual machine was a success. It wil
 
 
 
+Infrastructure process order
+
 
  
-
+Resource group \
+Virtual Network \
+Subnet \
+Security group \
+Security rule (for security group)
+Azure Public IP \
+NIC <br/>
+Virtual Machine \
+SSH key pair
+ 
 
 
       
