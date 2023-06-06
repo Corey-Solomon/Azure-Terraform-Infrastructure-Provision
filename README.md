@@ -17,6 +17,24 @@ Create a reproducible dev environment within Azure that I can deploy anytime I w
 - <b>Azure</b> 
 - <b>Vscode</b>
 
+
+
+
+<h2>Infrastructure Procedure</h2>
+ 
+- Resource group 
+- Virtual Network 
+- Subnet 
+- Security group 
+- Security rule (for security group)
+- Azure Public IP 
+- NIC 
+- Virtual Machine 
+- SSH key pair
+ 
+ 
+ 
+ 
 <h2>Program walk-through:</h2>
 
 ** (This Walk through I created starts at the point where VScode and the Terraform extensions have already been installed)
@@ -155,27 +173,6 @@ A bootstrap version of Docker to the Linux virtual machine was a success. It wil
 
 
 
-
-
-
-### terraform get
-
-
-
-Infrastructure process order
-
-
- 
-Resource group \
-Virtual Network \
-Subnet \
-Security group \
-Security rule (for security group)
-Azure Public IP \
-NIC <br/>
-Virtual Machine \
-SSH key pair
- 
 
 
       
