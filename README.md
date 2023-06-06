@@ -44,7 +44,7 @@ This project aims to deploy an Azure infrastructure using Terraform, a powerful 
  1. Open the Terminal in VScode. Run "az login" follow prompts to get signed in. You can evalute you succesffuly logged in by running "az account show"
  2. Create a new folder where you will begin to work from in this project. Ex. "Terraform-Azure"
 
- 3. Created a "main.tf" file
+ 3. Create a "main.tf" file
  
  
  ### 4. Azure Provider: <br/>
