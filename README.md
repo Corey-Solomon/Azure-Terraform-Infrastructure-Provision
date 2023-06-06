@@ -64,7 +64,7 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
 
 
 
-### 7. Deployed a virtual network into a pre existing resource group via Terraform: <br/>
+### 7. Deploying a virtual network into a pre existing resource group via Terraform: <br/>
  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/ea32e116-5d50-445c-a247-44f20bdd486e) <br/>
  Specifed resource group name and location. Assigned an address space. I did not declare subnets inline.
  
@@ -75,7 +75,7 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
  
 ### 9. Creating an Azure Security Group with Terraform: <br/>
   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/292e204e-5908-4e16-a61e-ba6b9290c87f) <br/>
-  I am deploying my Azure security group resource separate from the Azure security group rule. It makes it more simple to modify/ make certain changes going   forward. This will make things a lot cleaner and easier to manage.
+  I am deploying my Azure security group resource separate from the Azure security group rule. It makes it more simple to modify/ make certain changes going   forward. This will make infrastrcuture more efficient and easier to manage.
   
   
  ### 10. Creating Public IP with Terraform: <br/>
