@@ -48,39 +48,39 @@ This project aims to deploy an Azure infrastructure using Terraform, a powerful 
  
  
  ### 4. Azure Provider: <br/>
-![Alt Text](images/coreypic.png) <br/>
+![Alt Text](images/example1.png) <br/>
 Inserted in the Azure provider. What the Azure provider does is allows Terraform to communicate with the Azure API. That's how Terraform Knows how to deploy resources. I am administrating this procedure using the Azure CLI.
 
 
 ### 5. terraform init: <br/>
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/c22bf242-b71b-49f2-8855-56ba0a3489b7) <br/>
+![Alt Text](images/example2.png) <br/>
 ran the "terraform init" command to initialized the backend. The backend is a local backend which meants that my terraform state where everything is stored will be stored here.
 
 
 
 ### 6. Deploying a reosurce group: <br/>
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/cbed0c57-1a9c-4317-9e4c-1f9dffd2476e) <br/>
+![Alt Text](images/example3.png) <br/>
 Learned how to use “Terraform plan” to view changes made before I use “terraform apply”. In the figure above, I am deploying a resource group called “terraform-rg” into Azure in the East Us region. 
 
 
 
 ### 7. Deploying a virtual network into a pre existing resource group via Terraform: <br/>
- ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/ea32e116-5d50-445c-a247-44f20bdd486e) <br/>
+ ![Alt Text](images/example4.png) <br/>
  Specifed resource group name and location. Assigned an address space. I did not declare subnets inline.
  
  
 ### 8. Deploying a subnet in Azure with Terraform to a pre existing virtual network: <br/>
- ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/a3f25c25-d24a-435d-a140-4ee2bbf8378b) <br/>
+ ![Alt Text](images/example5.png) <br/>
  
  
 ### 9. Creating an Azure Security Group with Terraform: <br/>
-  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/292e204e-5908-4e16-a61e-ba6b9290c87f) <br/>
+ ![Alt Text](images/example6.png) <br/>
   I am deploying my Azure security group resource separate from the Azure security group rule. It makes it more simple to modify/ make certain changes going   forward. This will make infrastrcuture more efficient and easier to manage.
   
   
  ### 10. Creating Public IP with Terraform: <br/>
-   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/cafa5cea-2bf4-4a1c-8d96-750d148d862a) <br/>
-   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/4d602c97-dd38-4db2-830f-a69bfa368e9f) <br/>
+  ![Alt Text](images/example7.png) <br/>
+   ![Alt Text](images/example8.png) <br/>
    NOTE: Ip_address is labeled known after apply but even after it is applied, it will not be known until it can attach to something like a vm. When the public ip is set to “Dynamic” it will not show up until it is attached to something and is used.
 
 
