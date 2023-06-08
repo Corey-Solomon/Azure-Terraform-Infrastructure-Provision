@@ -75,12 +75,13 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
  
 ### 9. Creating an Azure Security Group with Terraform: <br/>
  ![Alt Text](images/example6.png) <br/>
+ ![Alt Text](images/example7.png) <br/>
   I am deploying my Azure security group resource separate from the Azure security group rule. It makes it more simple to modify/ make certain changes going   forward. This will make infrastrcuture more efficient and easier to manage.
   
   
  ### 10. Creating Public IP with Terraform: <br/>
-  ![Alt Text](images/example7.png) <br/>
-   ![Alt Text](images/example8.png) <br/>
+  ![Alt Text](images/example8.png) <br/>
+  ![Alt Text](images/example9.png) <br/>
    NOTE: Ip_address is labeled known after apply but even after it is applied, it will not be known until it can attach to something like a vm. When the public ip is set to “Dynamic” it will not show up until it is attached to something and is used.
 
 
@@ -89,13 +90,13 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
 
 
 ### 11. Creating a Network Interface in Azure with Terraform: <br/>
-  ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/9db16954-0e0b-434e-967e-5695426d176b) <br/>
+![Alt Text](images/example10.png) <br/>
  The NIC will receive it’s public ip address from the ip address I just created earlier.
  
      
      
  ### 12. Building a Linux Virtual Machine: <br/>
-   ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/6d03add5-3eaa-4129-a002-1e530d8ee9e1) <br/>
+   ![Alt Text](images/example11.png) <br/>
      For the size of the vm, we select “Standard_B1s” because that is what is recommended in the free tier.
 
 
@@ -105,13 +106,13 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
    Before this VM is created we still need to create our SSH key pair and add our configuration scripts <br/>
       
    Start out with a “ssh-keygen -t rsa” command to generate a key. You want to put it in the same folder you’re working from. <br/>
-      ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/45c59b46-9139-490f-97e6-fa340431816c) <br/>
-      ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/b84b7278-6fa6-4bae-950b-5469a68e8045) <br/>
+      ![Alt Text](images/example12.png) <br/>
+     ![Alt Text](images/example13.png) <br/>
       You can list the home directory /.ssh to find the keys available. <br/>
       
    Now you want to add the azure key block to the main.tf file. Make sure it’s within the Azurerm_linux_virtual_machine block.
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/3a1d7b4d-9f0f-4c1b-8bf4-da29a03c5279) <br/>
+![Alt Text](images/example14.png) <br/>
 You want to utilize the “File” function and pass the terraformazurekey.pub direct directory through it to pull from it. <br/>
 
 
@@ -119,16 +120,16 @@ You want to utilize the “File” function and pass the terraformazurekey.pub d
 
 *** Virtual Machine has offically been created <br/>
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/545cb0c9-6a9b-4800-bf04-0a87f7f5a467) <br/>
+![Alt Text](images/example15.png) <br/>
 
 
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/b5e4f95d-5353-4735-b142-67215d00e474) <br/>
+![Alt Text](images/example16.png) <br/>
  I then took the public address listed that was created and SSH into the Linux VM I created using
  “ssh -i ~/.ssh/terraformazurekey adminuser@20.163.142.147” 
  
  
- ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/f2f96b63-537f-4141-b7bb-d8ccefb96654) <br/>
+![Alt Text](images/example17.png) <br/>
  
  I am currently now logged into the VM I created.
  Ran the command : "lsb_release -a" to confirm what version of Ubuntu i’m running and where I am currently located. 
@@ -145,23 +146,23 @@ You want to utilize the “File” function and pass the terraformazurekey.pub d
 I created a customdata.tpl file (tpl typically stands for template) in the same working directory as Main.TF (Terraform-Azure folder) <br/>
 I placed a bash script in the file to install docker to the image upon deployment. <br/>
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/2d6b2f69-6377-4ba5-bf7c-48e83719fc6f) <br/>
+![Alt Text](images/example18.png) <br/>
 After that I went back to the main.tf and added the custom data argument to the Linux Virtual Machine section. <br/>
 I used the filebase64 function because “custom_data” in Azure is expecting just that <br/>
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/7c717168-b972-43fe-af59-210c039323b1) <br/>
+![Alt Text](images/example19.png) <br/>
 I passed the file “customdata.tpl” through the argument <br/>
 
 
 
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/e2518b46-303d-41fd-9c6e-e252d486ff8e) <br/>
+![Alt Text](images/example20.png) <br/>
 Here are my result from a "terraform plan" afterwards. <br/>
 As you can see it says 1 to add and 1 to destroy. <br/>
 ** Note: it says one to destroy because custom data being added to the virtual machine forces the VM to be redeployed. <br/>
 
 
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/1aad395c-295a-4eac-8884-0cc2893b9246) <br/>
+![Alt Text](images/example21.png) <br/>
 NOTE: Once redeployed, the public ip has changed <br/>
 I then SSH into the newly created VM <br/>
 The command input is  “ssh -i ~/.ssh/terraformazurekey adminuser@74.235.9.99” <br/>
@@ -169,7 +170,7 @@ The command input is  “ssh -i ~/.ssh/terraformazurekey adminuser@74.235.9.99�
 
 
 
-![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/a04fc3eb-d73e-4488-a733-af1da2de1166) <br/>
+![Alt Text](images/example22.png) <br/>
 Once successfully in the linux virtual machine, check to see if Docker has been successfully bootstrap to the deployment by running a “docker –version” <br/>
 A bootstrap version of Docker to the Linux virtual machine was a success. It will now be ready to be deployed with the virtual machine anytime the VM is deployed. 
 
