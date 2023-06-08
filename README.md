@@ -48,7 +48,7 @@ This project aims to deploy an Azure infrastructure using Terraform, a powerful 
  
  
  ### 4. Azure Provider: <br/>
- ![image](https://github.com/Corey-Solomon/Azure-Terraform-Infrastructure-Provision/assets/117605112/33846668-fd59-4b73-95fa-870117ddb3ed) <br/>
+![Example Image](Complete Dev Environment/Test image.png) <br/>
 Inserted in the Azure provider. What the Azure provider does is allows Terraform to communicate with the Azure API. That's how Terraform Knows how to deploy resources. I am administrating this procedure using the Azure CLI.
 
 
