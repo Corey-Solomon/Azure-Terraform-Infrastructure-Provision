@@ -48,7 +48,7 @@ This project aims to deploy an Azure infrastructure using Terraform, a powerful 
  
  
  ### 4. Azure Provider: <br/>
-![Alt Text](CompleteDevEnvironment/Testimage.png) <br/>
+![Alt Text](images/Test image.png) <br/>
 Inserted in the Azure provider. What the Azure provider does is allows Terraform to communicate with the Azure API. That's how Terraform Knows how to deploy resources. I am administrating this procedure using the Azure CLI.
 
 
@@ -178,9 +178,6 @@ A bootstrap version of Docker to the Linux virtual machine was a success. It wil
 <h2>Conclusion</h2>
 In conclusion, the successful completion of the Azure infrastructure provisioning project using Terraform has provided a reliable and efficient solution for managing infrastructure as code. By leveraging Terraform's declarative configuration and the power of Azure, I have achieved consistent and reproducible deployments of virtual machines, storage accounts, networking components, and more. The project has demonstrated the importance of careful planning and defining the desired state of our infrastructure, enabling the ability to scale and adapt as needed. Through rigorous testing and validation, I have ensured the functionality and performance of my deployed resources. Additionally, the use of Terraform's continuous deployment and updates feature has allowed me to make changes to the infrastructure configuration in a controlled and systematic manner. Overall, this project has empowered me to provision and manage Azure infrastructure in a scalable, efficient, and maintainable way, laying a strong foundation for future growth and development.
       
-
-
-
 
 
 
