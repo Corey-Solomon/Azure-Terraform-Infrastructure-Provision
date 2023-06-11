@@ -39,9 +39,9 @@ This project aims to deploy an Azure infrastructure using Terraform, a powerful 
  
 <h2>Program walk-through:</h2>
 
-** (This Walk through I created starts at the point where VScode and the Terraform extensions have already been installed)
+** (This walk-through I created starts at the point where VScode and the Terraform extensions have already been installed)
  
- 1. Open the Terminal in VScode. Run "az login" follow prompts to get signed in. You can evalute you successfully logged in by running "az account show"
+ 1. Open the Terminal in VScode. Run "az login" and follow prompts to get signed in. You can validate you successfully logged in by running "az account show"
  2. Create a new folder where you will begin to work from in this project. Ex. "Terraform-Azure"
 
  3. Create a "main.tf" file
@@ -49,18 +49,18 @@ This project aims to deploy an Azure infrastructure using Terraform, a powerful 
  
  ### 4. Azure Provider: <br/>
 ![Alt Text](images/example1.png) <br/>
-Inserted in the Azure provider. What the Azure provider does is allows Terraform to communicate with the Azure API. That's how Terraform Knows how to deploy resources. I am administrating this procedure using the Azure CLI.
+Inserted in the Azure provider. What the Azure provider does is allows Terraform to communicate with the Azure API. That's how Terraform knows how to deploy resources. I am administrating this procedure using the Azure CLI.
 
 
-### 5. terraform init: <br/>
+### 5. Terraform init: <br/>
 ![Alt Text](images/example2.png) <br/>
-ran the "terraform init" command to initialized the backend. The backend is a local backend which meants that my terraform state where everything is stored will be stored here.
+Ran the "terraform init" command to initialize the backend. The backend is a local backend which means that my terraform state where everything is stored will be stored here.
 
 
 
-### 6. Deploying a reosurce group: <br/>
+### 6. Deploying a resource group: <br/>
 ![Alt Text](images/example3.png) <br/>
-Learned how to use “Terraform plan” to view changes made before I use “terraform apply”. In the figure above, I am deploying a resource group called “terraform-rg” into Azure in the East Us region. 
+Learned how to use “Terraform plan” to view changes made before I use “terraform apply”. In the figure above, I am deploying a resource group called “terraform-rg” into Azure in the East US region. 
 
 
 
@@ -91,7 +91,7 @@ Learned how to use “Terraform plan” to view changes made before I use “ter
 
 ### 11. Creating a Network Interface in Azure with Terraform: <br/>
 ![Alt Text](images/example10.png) <br/>
- The NIC will receive it’s public ip address from the ip address I just created earlier.
+ The NIC will receive its public ip address from the ip address I just created earlier.
  
      
      
@@ -132,7 +132,7 @@ You want to utilize the “File” function and pass the terraformazurekey.pub d
 ![Alt Text](images/example17.png) <br/>
  
  I am currently now logged into the VM I created.
- Ran the command : "lsb_release -a" to confirm what version of Ubuntu i’m running and where I am currently located. 
+ Ran the command : "lsb_release -a" to confirm what version of Ubuntu I’m running and where I am currently located. 
  
  
  
@@ -156,7 +156,7 @@ I passed the file “customdata.tpl” through the argument <br/>
 
 
 ![Alt Text](images/example20.png) <br/>
-Here are my result from a "terraform plan" afterwards. <br/>
+Here are my results from a "terraform plan" afterwards. <br/>
 As you can see it says 1 to add and 1 to destroy. <br/>
 ** Note: it says one to destroy because custom data being added to the virtual machine forces the VM to be redeployed. <br/>
 
